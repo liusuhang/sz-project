@@ -12,6 +12,10 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <div>
+    <el-input class="input" v-model="input" type="file" placeholder="Please input" />
+    <el-button class="button" type="primary">文件处理</el-button>
+  </div>
 </template>
 
 <style scoped>
@@ -26,5 +30,12 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.input {
+  display: inline;
+  margin: 20px 30px;
+}
+.button {
+  width: 90px;
 }
 </style>
