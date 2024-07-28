@@ -7,9 +7,20 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BrandDNA: typeof import('./src/components/BrandDNA.vue')['default']
+    BrandElement: typeof import('./src/components/BrandElement.vue')['default']
+    BrandMaterial: typeof import('./src/components/BrandMaterial.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
+    ElCheckboxButton: typeof import('element-plus/es')['ElCheckboxButton']
+    ElCheckboxGroup: typeof import('element-plus/es')['ElCheckboxGroup']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElPagination: typeof import('element-plus/es')['ElPagination']
+    ElUpload: typeof import('element-plus/es')['ElUpload']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    LeftBar: typeof import('./src/components/LeftBar.vue')['default']
+    SwitchBtn: typeof import('./src/components/SwitchBtn.vue')['default']
+    ToolBar: typeof import('./src/components/ToolBar.vue')['default']
   }
 }

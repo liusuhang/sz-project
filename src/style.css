@@ -31,8 +31,17 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 40px;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0;
 }
 
 button {
@@ -46,9 +55,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -64,7 +71,39 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
 }
-
+body {
+  background: #141414;
+}
+.component-board {
+  position: absolute;
+  display: flex;
+  left: 170px;
+  top: 200px;
+}
+.el-checkbox-group {
+  display: flex!important;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.el-checkbox {
+  display: flex!important;
+  width: 27.5%;
+  height: 40px;
+  margin-top: 6px;
+  background: #373737;
+  color: white!important;
+  border-radius: 15px!important;
+}
+.el-checkbox__label {
+  margin: auto!important;
+}
+.el-checkbox__input {
+  display: none!important;
+}
+.el-textarea__inner {
+  background: transparent!important;
+  border: transparent!important;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
