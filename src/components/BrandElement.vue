@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import {ref, watch} from 'vue';
-
-const currentData = ref({brandName: '', color: '', font: ''})
+  import {ref, watch} from 'vue';
+  const currentData = ref({brandName: '', color: '', font: ''})
   const nameList = [
     {language: '中文', brandName: '耐克'},
     {language: '英文', brandName: 'nike'},

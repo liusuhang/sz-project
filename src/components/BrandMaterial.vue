@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import {ref, watch} from "vue";
-import {ElCheckboxGroup} from "element-plus";
-const productFeatures = [
-  "茶饮",
-  "酒水",
-  "香蕉",
-  "咖啡",
-  "服饰",
-  "保生品",
-  "日用品",
-  "口红",
-  "自定义"
-]
-const descriptionFeatures = [
-  "一/二线",
-  "性价比",
-  "18-40岁"
-]
-const currentData = ref({productFeatures: [],descriptionText: '', descriptionFeatures: [], files: []})
-watch(currentData.value,()=>{
-  console.log(currentData.value)
-})
+  import {ref, watch} from "vue";
+  import {ElCheckboxGroup} from "element-plus";
+  const productFeatures = [
+    "茶饮",
+    "酒水",
+    "香蕉",
+    "咖啡",
+    "服饰",
+    "保生品",
+    "日用品",
+    "口红",
+    "自定义"
+  ]
+  const descriptionFeatures = [
+    "一/二线",
+    "性价比",
+    "18-40岁"
+  ]
+  const currentData = ref({productFeatures: [],descriptionText: '', descriptionFeatures: [], files: []})
+  watch(currentData.value,()=>{
+    console.log(currentData.value)
+  })
 </script>
 
 <template>

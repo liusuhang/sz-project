@@ -1,22 +1,17 @@
 <script setup lang="ts">
-import {ref} from 'vue';
-
-const bullets = [
-  {key: 0},
-  {key: 1},
-  {key: 2}
-]
-
-defineProps({
-  componentKey: Number,
-})
-
-const showLeftBar = ref(true)
-
-const switchBarVisible=()=> {
-  showLeftBar.value = !showLeftBar.value;
-};
-
+  import {ref} from 'vue';
+  const bullets = [
+    {key: 0},
+    {key: 1},
+    {key: 2}
+  ]
+  defineProps({
+    componentKey: Number,
+  })
+  const showLeftBar = ref(true)
+  const switchBarVisible=()=> {
+    showLeftBar.value = !showLeftBar.value;
+  };
 </script>
 
 <template>

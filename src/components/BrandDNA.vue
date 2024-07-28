@@ -1,64 +1,63 @@
 <script setup lang="ts">
-import { ref, onMounted,  nextTick } from 'vue';
-import * as echarts from 'echarts';
-import root from './les-miserables.json'
-const chartDom = ref(null);
-let chartInstance = null;
-onMounted(async () => {
-  await nextTick();
-  chartInstance = echarts.init(chartDom.value);
-  const option = {
-    title: {
-      text: 'Les Miserables',
-      subtext: 'Circular layout',
-      top: 'bottom',
-      left: 'right',
-    },
-    tooltip: {},
-    legend: [
-      {
-        data: root.categories.map(function (a) {
-          return a.name
-        }),
+  import { ref, onMounted,  nextTick } from 'vue';
+  import * as echarts from 'echarts';
+  import root from './les-miserables.json'
+  const chartDom = ref(null);
+  let chartInstance = null;
+  onMounted(async () => {
+    await nextTick();
+    chartInstance = echarts.init(chartDom.value);
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right',
       },
-    ],
-    animationDurationUpdate: 1500,
-    animationEasingUpdate: 'quinticInOut',
-    series: [
-      {
-        name: 'Les Miserables',
-        type: 'graph',
-        legendHoverLink: false,
-        layout: 'none',
-        circular: {
-          rotateLabel: true,
+      tooltip: {},
+      legend: [
+        {
+          data: root.categories.map(function (a) {
+            return a.name
+          }),
         },
-        data: root.nodes,
-        links: root.links,
-        categories: root.categories,
-        roam: true,
-        label: {
-          position: 'right',
-          formatter: '{b}',
-        },
-        lineStyle: {
-          color: 'source',
-          curveness: 0.3,
-          opacity: 1,
-          width: 1.2,
-        },
-        emphasis: {
-          focus: 'adjacency',
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          legendHoverLink: false,
+          layout: 'none',
+          circular: {
+            rotateLabel: true,
+          },
+          data: root.nodes,
+          links: root.links,
+          categories: root.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}',
+          },
           lineStyle: {
-            width: 10
-          }
+            color: 'source',
+            curveness: 0.3,
+            opacity: 1,
+            width: 1.2,
+          },
+          emphasis: {
+            focus: 'adjacency',
+            lineStyle: {
+              width: 10
+            }
+          },
         },
-      },
-    ],
-  }
-  chartInstance.setOption(option);
-});
-
+      ],
+    }
+    chartInstance.setOption(option);
+  });
 </script>
 
 <template>

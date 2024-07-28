@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {ArrowRight} from "@element-plus/icons";
-const componentKey = defineModel({type: Number, default: 0})
-const switchComponent = () =>{
-  componentKey.value = componentKey.value === 2 ? 0 : componentKey.value + 1
-  console.log(componentKey.value)
-}
+  import {ArrowRight} from "@element-plus/icons";
+  const componentKey = defineModel({type: Number, default: 0})
+  const switchComponent = () =>{
+    componentKey.value = componentKey.value === 2 ? 0 : componentKey.value + 1
+    console.log(componentKey.value)
+  }
 </script>
 
 <template>
